@@ -29,16 +29,12 @@ public class ZAMSBlocks {
                     () -> new MegaResearchStationBlock(
                             BlockBehaviour.Properties.of()
                                     .mapColor(MapColor.COLOR_GRAY)
-                                    .strength(3.5F)
+                                    .strength(2.5F)
                                     .noOcclusion()
-                                    .requiresCorrectToolForDrops()
-                                    .sound(SoundType.METAL)
+                                    .sound(SoundType.WOOD)
                     )
             );
 
-    /*
-     * Mega Energy Cores
-     */
 
     public static final RegistrySupplier<Block> MEGA_SHARD_BLOCK =
             BLOCKS.register(

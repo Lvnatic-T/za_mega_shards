@@ -1,6 +1,13 @@
 {
   "replace": false,
   "values": [
-    "za_mega_shards:mega_research_station"
+    "za_mega_shards:mega_research_station",
+    "za_mega_shards:mega_shard_block",
+    "za_mega_shards:mega_energy_core",
+    "za_mega_shards:deepslate_mega_energy_core",
+    "za_mega_shards:small_mega_energy_bud",
+    "za_mega_shards:medium_mega_energy_bud",
+    "za_mega_shards:large_mega_energy_bud",
+    "za_mega_shards:mega_energy_cluster"
   ]
 }
