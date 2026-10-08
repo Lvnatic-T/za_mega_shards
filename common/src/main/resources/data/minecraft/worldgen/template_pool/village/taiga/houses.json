@@ -273,6 +273,92 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_taiga1",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_taiga",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_taiga2",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_taiga",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_taiga3",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_taiga",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_taiga4",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_taiga",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_taiga5",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_taiga",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_taiga6",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_taiga",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_taiga/village_taiga_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:villages/pokecenter_mossy",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_taiga/village_taiga_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:villages/pokecenter_mossy",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      },
+      "weight": 6
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
         "location": "za_mega_shards:village_taiga/village_taiga_research_lab",
         "override_liquid_settings": "ignore_waterlogging",
         "processors": {

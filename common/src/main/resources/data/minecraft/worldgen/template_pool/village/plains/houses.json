@@ -377,6 +377,92 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_plains1",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_plains",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_plains2",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_plains",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_plains3",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_plains",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_plains4",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_plains",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_plains5",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_plains",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_plains6",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_plains",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_plains/village_plains_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:villages/pokecenter_mossy",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_plains/village_plains_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:villages/pokecenter_mossy",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      },
+      "weight": 10
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
         "location": "za_mega_shards:village_plains/village_plains_research_lab",
         "override_liquid_settings": "ignore_waterlogging",
         "processors": {

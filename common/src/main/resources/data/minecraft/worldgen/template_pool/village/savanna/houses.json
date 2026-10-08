@@ -369,6 +369,92 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_savanna1",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_savanna",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_savanna2",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_savanna",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_savanna3",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_savanna",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_savanna4",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_savanna",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_savanna5",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_savanna",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_savanna6",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_savanna",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_savanna/village_savanna_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_savanna/village_savanna_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      },
+      "weight": 5
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
         "location": "za_mega_shards:village_savanna/village_savanna_research_lab",
         "override_liquid_settings": "ignore_waterlogging",
         "processors": {

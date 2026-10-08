@@ -359,6 +359,92 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_snowy1",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_snowy",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_snowy2",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_snowy",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_snowy3",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_snowy",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_snowy4",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_snowy",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_snowy5",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_snowy",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:habitats/village_snowy6",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "cobblemon:habitats/abandoned_village_snowy",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_snowy/village_snowy_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cobblemon:village_snowy/village_snowy_pokecenter",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 150
+    },
+    {
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      },
+      "weight": 6
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
         "location": "za_mega_shards:village_snowy/village_snowy_research_lab",
         "override_liquid_settings": "ignore_waterlogging",
         "processors": {
