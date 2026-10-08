@@ -1,0 +1,24 @@
+
+{
+  "parent": "za_mega_shards:crystal_clear",
+  "display": {
+    "icon": {
+      "id": "za_mega_shards:small_mega_energy_bud"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.shouldnt_have_done_that.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.shouldnt_have_done_that.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "break_without_silk_touch": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

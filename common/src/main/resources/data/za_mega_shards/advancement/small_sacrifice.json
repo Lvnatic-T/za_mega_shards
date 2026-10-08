@@ -1,0 +1,20 @@
+{
+  "parent": "za_mega_shards:nothing_goes_to_waste",
+  "display": {
+    "icon": {
+      "id": "mega_showdown:absolite"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.small_sacrifice.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.small_sacrifice.description"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "disassemble": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

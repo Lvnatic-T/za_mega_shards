@@ -1,0 +1,67 @@
+{
+  "parent": "za_mega_shards:ultimate_discovery",
+  "display": {
+    "icon": {
+      "id": "mega_showdown:mega_stone"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.mega_collector.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.mega_collector.description"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "tier_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#za_mega_shards:mega_stone_tier_1"
+          }
+        ]
+      }
+    },
+    "tier_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#za_mega_shards:mega_stone_tier_2"
+          }
+        ]
+      }
+    },
+    "tier_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#za_mega_shards:mega_stone_tier_3"
+          }
+        ]
+      }
+    },
+    "tier_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#za_mega_shards:mega_stone_tier_4"
+          }
+        ]
+      }
+    },
+    "tier_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#za_mega_shards:mega_stone_tier_5"
+          }
+        ]
+      }
+    }
+  }
+}

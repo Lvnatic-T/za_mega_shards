@@ -1,0 +1,20 @@
+{
+  "parent": "za_mega_shards:mass_production",
+  "display": {
+    "icon": {
+      "id": "za_mega_shards:mega_shard_block"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.mass_production.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.mass_production.description"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "hold_128_shards": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

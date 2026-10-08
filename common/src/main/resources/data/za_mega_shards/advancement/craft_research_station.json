@@ -1,0 +1,23 @@
+{
+  "parent": "za_mega_shards:root",
+  "display": {
+    "icon": {
+      "id": "za_mega_shards:mega_research_station"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.craft_research_station.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.craft_research_station.description"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "craft_station": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "za_mega_shards:mega_research_station"
+      }
+    }
+  }
+}

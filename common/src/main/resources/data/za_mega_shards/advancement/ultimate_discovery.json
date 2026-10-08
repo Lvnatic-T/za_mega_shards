@@ -1,0 +1,27 @@
+{
+  "parent": "za_mega_shards:root",
+  "display": {
+    "icon": {
+      "id": "mega_showdown:mewtwonite_y"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.ultimate_discovery.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.ultimate_discovery.description"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "obtain_tier_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#za_mega_shards:mega_stone_tier_5"
+          }
+        ]
+      }
+    }
+  }
+}

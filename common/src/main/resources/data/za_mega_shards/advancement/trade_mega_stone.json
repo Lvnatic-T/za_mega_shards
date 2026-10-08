@@ -1,0 +1,29 @@
+{
+  "parent": "za_mega_shards:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:emerald"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.trade_mega_stone.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.trade_mega_stone.description"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "trade_mega_stone": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "items": "#za_mega_shards:mega_stones"
+        },
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{profession:\"za_mega_shards:mega_researcher\"}}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "parent": "za_mega_shards:nothing_goes_to_waste",
+  "display": {
+    "icon": {
+      "id": "mega_showdown:metagrossite"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.third_times_the_harm.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.third_times_the_harm.description"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "disassemble": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

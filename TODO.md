@@ -1,12 +1,8 @@
 # To-do List
 
-### General
-- advancements
-- fix required tools for most of the blocks
-- make crystal clusters & cores emit light with shaders
-
-### Cosmetics / fine-tuning
 - Mega Research Station Cobblestone part is not the same color scheme
 - Compatibility with other mods testing (REI/EMI/JEI, modmenu idk)
-- add translations
+- Add translations in german & whatever language people contribute
 - Potentially add a config setting that lets people disable the interaction with the Research Station
+- Check Blues alternative Mega Shard texture and do a poll which one people prefer
+- Make crystal clusters & cores emit light with shaders

@@ -1,0 +1,27 @@
+{
+  "parent": "za_mega_shards:root",
+  "display": {
+    "icon": {
+      "id": "za_mega_shards:mega_shard"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.first_mega_shard.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.first_mega_shard.description"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "obtained_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "za_mega_shards:mega_shard"
+          }
+        ]
+      }
+    }
+  }
+}

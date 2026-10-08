@@ -1,0 +1,18 @@
+{
+  "parent": "za_mega_shards:nothing_goes_to_waste",
+  "display": {
+    "icon": {"id": "mega_showdown:mewtwonite_x"},
+    "title": {
+      "translate": "advancement.za_mega_shards.no_refunds.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.no_refunds.description"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "disassemble": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

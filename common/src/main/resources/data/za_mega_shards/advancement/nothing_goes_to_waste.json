@@ -1,0 +1,20 @@
+{
+  "parent": "za_mega_shards:craft_research_station",
+  "display": {
+    "icon": {
+      "id": "za_mega_shards:mega_shard"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.nothing_goes_to_waste.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.nothing_goes_to_waste.description"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "disassemble": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

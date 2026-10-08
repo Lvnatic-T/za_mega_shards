@@ -1,0 +1,23 @@
+{
+  "parent": "za_mega_shards:first_mega_shard",
+  "display": {
+    "icon": {
+      "id": "za_mega_shards:mega_shard_block"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.high_energy_density.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.high_energy_density.description"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "craft_shard_block": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "za_mega_shards:mega_shard_from_block"
+      }
+    }
+  }
+}

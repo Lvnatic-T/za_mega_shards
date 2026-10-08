@@ -18,6 +18,9 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.ResultContainer;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import com.github.lvantic.za_mega_shards.advancement.ZAMSAdvancements;
+import net.minecraft.server.level.ServerPlayer;
+
 
 public class MegaResearchStationMenu extends AbstractContainerMenu {
 
@@ -65,9 +68,10 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
 
             @Override
             public void onTake(Player player, ItemStack stack) {
-                MegaResearchStationMenu.this.consumeInput();
+                MegaResearchStationMenu.this.consumeInput(player);
                 super.onTake(player, stack);
             }
+
         });
 
         for (int row = 0; row < 3; row++) {
@@ -104,9 +108,11 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
         this.broadcastChanges();
     }
 
-    private void consumeInput() {
+    private void consumeInput(Player player) {
         ItemStack inputStack = this.inputContainer.getItem(MegaResearchStationBlockEntity.INPUT_SLOT);
         if (inputStack.isEmpty() || !MegaStoneTierHelper.isMegaStone(inputStack)) return;
+
+        int tier = MegaStoneTierHelper.getTier(inputStack);
 
         inputStack.shrink(1);
         if (inputStack.isEmpty()) {
@@ -115,6 +121,8 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
             this.inputContainer.setItem(MegaResearchStationBlockEntity.INPUT_SLOT, inputStack);
         }
         this.inputContainer.setChanged();
+
+        if (player instanceof ServerPlayer serverPlayer) ZAMSAdvancements.awardDisassembly(serverPlayer, tier);
 
         this.access.execute((level, pos) -> {
             level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 2.0F, 0.85F);
@@ -130,6 +138,7 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
 
         this.updateResult();
     }
+
 
     @Override
     public boolean stillValid(Player player) {

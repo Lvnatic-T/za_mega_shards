@@ -1,0 +1,20 @@
+{
+  "parent": "za_mega_shards:nothing_goes_to_waste",
+  "display": {
+    "icon": {
+      "id": "mega_showdown:garchompite"
+    },
+    "title": {
+      "translate": "advancement.za_mega_shards.second_thoughts.title"
+    },
+    "description": {
+      "translate": "advancement.za_mega_shards.second_thoughts.description"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "disassemble": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
