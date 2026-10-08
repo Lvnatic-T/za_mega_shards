@@ -29,6 +29,14 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.za_mega_shards]]
+modId = "architectury"
+type = "required"
+reason = "Architectury is required for this mod to function properly!"
+versionRange = "[13.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.za_mega_shards]]
 modId = "cobblemon"
 type = "required"
 reason = "You're missing like the most important mod for this to work. Install/Update it!"
@@ -42,4 +50,12 @@ type = "required"
 reason = "You're missing like the second most important mod for this to work. Install/Update it!"
 versionRange = "[1.2.0+1.8.1+1.21.1-release,)"
 ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.za_mega_shards]]
+modId = "lithostitched"
+type = "optional"
+reason = "Enables Research Lab generation in villages."
+versionRange = "[1.8.0,)"
+ordering = "NONE"
 side = "BOTH"

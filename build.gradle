@@ -116,15 +116,19 @@ publishMods {
         file project(":fabric")
         modLoaders.add("fabric")
         requires("fabric-api")
+        requires("architectury-api")
         requires("cobblemon")
         requires("cobblemon-mega-showdown")
+        optional("lithostitched")
     }
     modrinth("modrinthNeoForge") {
         from mrOptions
         file project(":neoforge")
         modLoaders.add("neoforge")
+        requires("architectury-api")
         requires("cobblemon")
         requires("cobblemon-mega-showdown")
+        optional("lithostitched")
     }
 
     curseforge("curseforgeFabric") {
@@ -132,15 +136,19 @@ publishMods {
         file project(":fabric")
         modLoaders.add("fabric")
         requires("fabric-api")
+        requires("architectury-api")
         requires("cobblemon")
         requires("cobblemon-mega-showdown")
+        optional("lithostitched")
     }
 
     curseforge("curseforgeNeoForge") {
         from cfOptions
         file project(":neoforge")
         modLoaders.add("neoforge")
+        requires("architectury-api")
         requires("cobblemon")
         requires("cobblemon-mega-showdown")
+        optional("lithostitched")
     }
 }
