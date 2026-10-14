@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancement.za_mega_shards.root.description"
     },
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "background": "za_mega_shards:textures/gui/advancements/za_mega_shards_alt.png",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
