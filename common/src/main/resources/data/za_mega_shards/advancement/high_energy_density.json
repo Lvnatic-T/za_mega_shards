@@ -16,7 +16,7 @@
     "craft_shard_block": {
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe_id": "za_mega_shards:mega_shard_from_block"
+        "recipe_id": "za_mega_shards:mega_shard_block"
       }
     }
   }
