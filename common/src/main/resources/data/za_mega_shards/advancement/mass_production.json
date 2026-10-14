@@ -1,5 +1,5 @@
 {
-  "parent": "za_mega_shards:mass_production",
+  "parent": "za_mega_shards:first_mega_shard",
   "display": {
     "icon": {
       "id": "za_mega_shards:mega_shard_block"
