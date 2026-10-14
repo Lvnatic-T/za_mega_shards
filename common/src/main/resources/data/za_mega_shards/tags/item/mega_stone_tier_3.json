@@ -2,12 +2,24 @@
   "replace": false,
   "values": [
     "mega_showdown:aerodactylite",
-    "mega_showdown:baxcalibrite",
+    "mega_showdown:alakazite",
     "mega_showdown:blastoisinite",
+    "mega_showdown:blazikenite",
     "mega_showdown:cameruptite",
+    "mega_showdown:galladite",
     "mega_showdown:gardevoirite",
-    "mega_showdown:golisopite",
+    "mega_showdown:gyaradosite",
+    "mega_showdown:kangaskhanite",
+    "mega_showdown:lopunnite",
+    "mega_showdown:lucarionite",
+    "mega_showdown:manectite",
+    "mega_showdown:mawilite",
     "mega_showdown:medichamite",
-    "mega_showdown:metagrossite"
+    "mega_showdown:meganiumite",
+    "mega_showdown:pyroarite",
+    "mega_showdown:sablenite",
+    "mega_showdown:scizorite",
+    "mega_showdown:scovillainite",
+    "mega_showdown:venusaurite"
   ]
 }
