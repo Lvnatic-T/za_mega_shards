@@ -1,0 +1,19 @@
+
+{
+  "replace": false,
+  "values": [
+    "#cobblemon:is_overworld",
+    {
+      "id": "#still_life:is_still_life",
+      "required": false
+    },
+    {
+      "id": "#biomeswevegone:overworld",
+      "required": false
+    },
+    {
+      "id": "#terralith:reference/cave",
+      "required": false
+    }
+  ]
+}
