@@ -11,12 +11,10 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
-public final class ZAMegaShardsFabricClient
-        implements ClientModInitializer {
+public final class ZAMegaShardsFabricClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
         MenuScreens.register(
                 ZAMSMenuTypes.MEGA_RESEARCH_STATION.get(),
                 MegaResearchStationScreen::new
