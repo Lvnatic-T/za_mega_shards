@@ -1,6 +1,7 @@
 package com.github.lvantic.za_mega_shards.worldgen;
 
 import com.github.lvantic.za_mega_shards.ZAMegaShards;
+import com.github.lvantic.za_mega_shards.config.ZAMSConfig;
 import dev.architectury.event.events.common.LifecycleEvent;
 import dev.architectury.registry.level.biome.BiomeModifications;
 import net.minecraft.core.registries.Registries;
@@ -27,14 +28,16 @@ public final class ZAMSWorldGeneration {
     }
 
     public static void register() {
-        LifecycleEvent.SETUP.register(() ->
-                BiomeModifications.addProperties(
-                        context -> context.hasTag(MEGA_ENERGY_DEPOSIT_BIOMES),
-                        (context, mutable) -> mutable.getGenerationProperties().addFeature(
-                                GenerationStep.Decoration.UNDERGROUND_DECORATION,
-                                MEGA_ENERGY_DEPOSIT
-                        )
-                )
-        );
+        LifecycleEvent.SETUP.register(() -> {
+            if (!ZAMSConfig.get().isMegaEnergyDepositsEnabled()) return;
+
+            BiomeModifications.addProperties(
+                    context -> context.hasTag(MEGA_ENERGY_DEPOSIT_BIOMES),
+                    (context, mutable) -> mutable.getGenerationProperties().addFeature(
+                            GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                            MEGA_ENERGY_DEPOSIT
+                    )
+            );
+        });
     }
 }

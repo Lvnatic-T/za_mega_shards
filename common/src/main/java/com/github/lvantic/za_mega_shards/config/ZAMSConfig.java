@@ -1,4 +1,3 @@
-
 package com.github.lvantic.za_mega_shards.config;
 
 import com.github.lvantic.za_mega_shards.ZAMegaShards;
@@ -22,6 +21,9 @@ public final class ZAMSConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(ZAMegaShards.MOD_ID);
     private static final int[] DEFAULT_BUY = {64, 80, 96, 112, 128};
     private static final int[] DEFAULT_RETURN = {32, 40, 48, 56, 64};
+    private static final boolean DEFAULT_DISASSEMBLY = true;
+    private static final boolean DEFAULT_DEPOSITS = true;
+    private static final int DEFAULT_MAX_USES = 4;
 
     private static final String BUY_COMMENTS = """
             # Prices when trading with the Mega Researcher Villager
@@ -35,14 +37,44 @@ public final class ZAMSConfig {
             # RANGE: 1 - 64 anything outside will result in the DEFAULT being used
             """;
 
-    private static volatile ZAMSConfig instance = new ZAMSConfig(DEFAULT_BUY, DEFAULT_RETURN);
+    private static final String DISASSEMBLY_COMMENTS = """
+            # Whether Mega Stones can be disassembled into Mega Shards
+            # The Research Station can still be used as a villager workstation when disabled
+            # DEFAULT: true
+            """;
+
+    private static final String DEPOSIT_COMMENTS = """
+            # Whether Mega Energy Deposits generate naturally
+            # Existing deposits are not removed when disabled
+            # Requires a game/server restart to take effect
+            # DEFAULT: true
+            """;
+
+    private static final String TRADE_COMMENTS = """
+            # Maximum number of uses per Mega Researcher trade before restocking
+            # Existing villager offers retain their previously generated limits
+            # DEFAULT: 4
+            # RANGE: 1 - 64 anything outside will result in the DEFAULT being used
+            """;
+
+    private static volatile ZAMSConfig instance = defaults();
 
     private final int[] buyPrices;
     private final int[] shardReturns;
+    private final boolean enableDisassembly;
+    private final boolean enableMegaEnergyDeposits;
+    private final int maxTradesPerOffer;
 
-    private ZAMSConfig(int[] buyPrices, int[] shardReturns) {
+    private ZAMSConfig(int[] buyPrices, int[] shardReturns, boolean enableDisassembly, boolean enableMegaEnergyDeposits, int maxTradesPerOffer) {
         this.buyPrices = buyPrices.clone();
         this.shardReturns = shardReturns.clone();
+        this.enableDisassembly = enableDisassembly;
+        this.enableMegaEnergyDeposits = enableMegaEnergyDeposits;
+        this.maxTradesPerOffer = maxTradesPerOffer;
+    }
+
+    private static ZAMSConfig defaults() {
+        return new ZAMSConfig(DEFAULT_BUY, DEFAULT_RETURN, DEFAULT_DISASSEMBLY, DEFAULT_DEPOSITS, DEFAULT_MAX_USES);
     }
 
     public static ZAMSConfig get() {
@@ -57,16 +89,28 @@ public final class ZAMSConfig {
         return tier >= 1 && tier <= 5 ? shardReturns[tier - 1] : 0;
     }
 
+    public boolean isDisassemblyEnabled() {
+        return enableDisassembly;
+    }
+
+    public boolean isMegaEnergyDepositsEnabled() {
+        return enableMegaEnergyDeposits;
+    }
+
+    public int getMaxTradesPerOffer() {
+        return maxTradesPerOffer;
+    }
+
     public static void load() {
         Path path = Platform.getConfigFolder().resolve("za_mega_shards.toml");
-        ZAMSConfig defaults = new ZAMSConfig(DEFAULT_BUY, DEFAULT_RETURN);
+        ZAMSConfig defaultConfig = defaults();
 
         try {
             Files.createDirectories(path.getParent());
 
             if (Files.notExists(path)) {
-                Files.writeString(path, formatToml(defaults), StandardCharsets.UTF_8);
-                instance = defaults;
+                Files.writeString(path, formatToml(defaultConfig), StandardCharsets.UTF_8);
+                instance = defaultConfig;
                 LOGGER.info("Created default ZA Mega Shards config at {}", path);
                 return;
             }
@@ -86,15 +130,19 @@ public final class ZAMSConfig {
 
             LOGGER.info("Loaded ZA Mega Shards config from {}", path);
         } catch (IOException | RuntimeException exception) {
-            instance = defaults;
-            LOGGER.error("Failed to load ZA Mega Shards config. Using default economy values.", exception);
+            instance = defaultConfig;
+            LOGGER.error("Failed to load ZA Mega Shards config. Using default values.", exception);
         }
     }
 
     private static ZAMSConfig readToml(String contents) {
         int[] buy = DEFAULT_BUY.clone();
         int[] returns = DEFAULT_RETURN.clone();
-        boolean[][] found = new boolean[2][5];
+        boolean enableDisassembly = DEFAULT_DISASSEMBLY;
+        boolean enableDeposits = DEFAULT_DEPOSITS;
+        int maxUses = DEFAULT_MAX_USES;
+        boolean[][] foundTiers = new boolean[2][5];
+        boolean[] foundOptions = new boolean[3];
         int section = -1;
 
         for (String rawLine : contents.split("\\R")) {
@@ -105,6 +153,9 @@ public final class ZAMSConfig {
                 section = switch (line) {
                     case "[mega_stone_buy_prices]" -> 0;
                     case "[mega_stone_shard_returns]" -> 1;
+                    case "[research_station]" -> 2;
+                    case "[world_generation]" -> 3;
+                    case "[mega_researcher]" -> 4;
                     default -> -1;
                 };
                 continue;
@@ -116,25 +167,56 @@ public final class ZAMSConfig {
             if (equals < 0) continue;
 
             String key = line.substring(0, equals).trim();
-            if (!key.matches("tier_[1-5]")) continue;
+            String value = line.substring(equals + 1).trim();
 
-            int tier = key.charAt(5) - '1';
-            String group = section == 0 ? "mega_stone_buy_prices" : "mega_stone_shard_returns";
-            int[] values = section == 0 ? buy : returns;
-            int[] defaults = section == 0 ? DEFAULT_BUY : DEFAULT_RETURN;
-            int maximum = section == 0 ? 128 : 64;
+            if (section <= 1) {
+                if (!key.matches("tier_[1-5]")) continue;
 
-            if (found[section][tier]) {
-                LOGGER.warn("Duplicate '{}.{}'; using default {}.", group, key, defaults[tier]);
-                values[tier] = defaults[tier];
+                int tier = key.charAt(5) - '1';
+                String group = section == 0 ? "mega_stone_buy_prices" : "mega_stone_shard_returns";
+                int[] values = section == 0 ? buy : returns;
+                int[] defaults = section == 0 ? DEFAULT_BUY : DEFAULT_RETURN;
+                int maximum = section == 0 ? 128 : 64;
+
+                if (foundTiers[section][tier]) {
+                    LOGGER.warn("Duplicate '{}.{}'; using default {}.", group, key, defaults[tier]);
+                    values[tier] = defaults[tier];
+                    continue;
+                }
+
+                foundTiers[section][tier] = true;
+                values[tier] = readValue(value, group, key, defaults[tier], maximum);
                 continue;
             }
 
-            found[section][tier] = true;
-            values[tier] = readValue(line.substring(equals + 1).trim(), group, key, defaults[tier], maximum);
+            if (section == 2 && key.equals("enable_disassembly")) {
+                if (foundOptions[0]) {
+                    LOGGER.warn("Duplicate 'research_station.enable_disassembly'; using default {}.", DEFAULT_DISASSEMBLY);
+                    enableDisassembly = DEFAULT_DISASSEMBLY;
+                } else {
+                    foundOptions[0] = true;
+                    enableDisassembly = readBoolean(value, "research_station", key, DEFAULT_DISASSEMBLY);
+                }
+            } else if (section == 3 && key.equals("enable_mega_energy_deposits")) {
+                if (foundOptions[1]) {
+                    LOGGER.warn("Duplicate 'world_generation.enable_mega_energy_deposits'; using default {}.", DEFAULT_DEPOSITS);
+                    enableDeposits = DEFAULT_DEPOSITS;
+                } else {
+                    foundOptions[1] = true;
+                    enableDeposits = readBoolean(value, "world_generation", key, DEFAULT_DEPOSITS);
+                }
+            } else if (section == 4 && key.equals("max_trades_per_offer")) {
+                if (foundOptions[2]) {
+                    LOGGER.warn("Duplicate 'mega_researcher.max_trades_per_offer'; using default {}.", DEFAULT_MAX_USES);
+                    maxUses = DEFAULT_MAX_USES;
+                } else {
+                    foundOptions[2] = true;
+                    maxUses = readValue(value, "mega_researcher", key, DEFAULT_MAX_USES, 64);
+                }
+            }
         }
 
-        return new ZAMSConfig(buy, returns);
+        return new ZAMSConfig(buy, returns, enableDisassembly, enableDeposits, maxUses);
     }
 
     private static int readValue(String value, String group, String key, int fallback, int maximum) {
@@ -150,11 +232,22 @@ public final class ZAMSConfig {
         return fallback;
     }
 
+    private static boolean readBoolean(String value, String group, String key, boolean fallback) {
+        if (value.equals("true")) return true;
+        if (value.equals("false")) return false;
+
+        LOGGER.warn("'{}.{}' must be true or false; using default {}.", group, key, fallback);
+        return fallback;
+    }
+
     private static String formatToml(ZAMSConfig config) {
         StringBuilder result = new StringBuilder();
         appendSection(result, BUY_COMMENTS, "mega_stone_buy_prices", config.buyPrices);
         result.append("\n\n");
         appendSection(result, RETURN_COMMENTS, "mega_stone_shard_returns", config.shardReturns);
+        appendSetting(result, DISASSEMBLY_COMMENTS, "research_station", "enable_disassembly", config.enableDisassembly);
+        appendSetting(result, DEPOSIT_COMMENTS, "world_generation", "enable_mega_energy_deposits", config.enableMegaEnergyDeposits);
+        appendSetting(result, TRADE_COMMENTS, "mega_researcher", "max_trades_per_offer", config.maxTradesPerOffer);
         return result.toString();
     }
 
@@ -163,6 +256,11 @@ public final class ZAMSConfig {
         for (int i = 0; i < values.length; i++) {
             result.append("tier_").append(i + 1).append(" = ").append(values[i]).append('\n');
         }
+    }
+
+    private static void appendSetting(StringBuilder result, String comments, String name, String key, Object value) {
+        result.append("\n\n").append(comments).append('\n').append('[').append(name).append("]\n");
+        result.append(key).append(" = ").append(value).append('\n');
     }
 
     private static String mergeDefaults(String contents) {
@@ -215,7 +313,7 @@ public final class ZAMSConfig {
         List<String> pendingComments = new ArrayList<>();
         DefaultSection current = null;
 
-        for (String line : formatToml(new ZAMSConfig(DEFAULT_BUY, DEFAULT_RETURN)).split("\\R")) {
+        for (String line : formatToml(defaults()).split("\\R")) {
             String trimmed = line.trim();
 
             if (trimmed.startsWith("#")) {

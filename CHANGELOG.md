@@ -36,6 +36,6 @@
 - Includes multiple tier-specific advancements and a few hidden challenges so you don't get bored by the "grind"!
 
 ### Configurations & Support:
-- Added a server-side config for adjusting Mega Stone prices and disassembly returns for all five tiers
+- Added a server-side config for adjusting many things like maximum trades amount, toggling Cluster generation & disassembly, as well as Mega Stone prices and disassembly returns per tier
 - Mega Stone tiers are handled through item tags, allowing datapacks to add or rebalance Stones without modifying the mod itself
-- [Lost Lore](https://modrinth.com/datapack/poketwo) v3.2+ will add support for its custom Mega Stones to be traded in the Mega Research Station & sold by the Mega Researcher
+- [Lost Lore](https://modrinth.com/datapack/poketwo) v3.2+ adds support for its custom Mega Stones to be available in trades & being able to disassemble them

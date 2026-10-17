@@ -1,12 +1,15 @@
 package com.github.lvantic.za_mega_shards.screen.custom.handler;
 
+import com.github.lvantic.za_mega_shards.advancement.ZAMSAdvancements;
 import com.github.lvantic.za_mega_shards.block.ZAMSBlocks;
 import com.github.lvantic.za_mega_shards.block.entity.MegaResearchStationBlockEntity;
+import com.github.lvantic.za_mega_shards.config.ZAMSConfig;
 import com.github.lvantic.za_mega_shards.item.ZAMSItems;
 import com.github.lvantic.za_mega_shards.screen.ZAMSMenuTypes;
 import com.github.lvantic.za_mega_shards.util.MegaStoneTierHelper;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
@@ -18,9 +21,6 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.ResultContainer;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import com.github.lvantic.za_mega_shards.advancement.ZAMSAdvancements;
-import net.minecraft.server.level.ServerPlayer;
-
 
 public class MegaResearchStationMenu extends AbstractContainerMenu {
 
@@ -71,7 +71,6 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
                 MegaResearchStationMenu.this.consumeInput(player);
                 super.onTake(player, stack);
             }
-
         });
 
         for (int row = 0; row < 3; row++) {
@@ -89,6 +88,12 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
 
     private void updateResult() {
         if (this.clientSide) return;
+
+        if (!ZAMSConfig.get().isDisassemblyEnabled()) {
+            this.resultContainer.setItem(0, ItemStack.EMPTY);
+            this.broadcastChanges();
+            return;
+        }
 
         ItemStack inputStack = this.inputContainer.getItem(MegaResearchStationBlockEntity.INPUT_SLOT);
         if (inputStack.isEmpty() || !MegaStoneTierHelper.isMegaStone(inputStack)) {
@@ -109,6 +114,8 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
     }
 
     private void consumeInput(Player player) {
+        if (!ZAMSConfig.get().isDisassemblyEnabled()) return;
+
         ItemStack inputStack = this.inputContainer.getItem(MegaResearchStationBlockEntity.INPUT_SLOT);
         if (inputStack.isEmpty() || !MegaStoneTierHelper.isMegaStone(inputStack)) return;
 
@@ -138,7 +145,6 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
 
         this.updateResult();
     }
-
 
     @Override
     public boolean stillValid(Player player) {
