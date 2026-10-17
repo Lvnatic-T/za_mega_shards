@@ -43,7 +43,7 @@ _v3.2+ added support for all features of this mod, meaning all its custom Mega S
 
 ![MEGA SHARDS divider](https://cdn.modrinth.com/data/cached_images/b738f4b5fec0d7eb26fb9c1464c6bc543ff58171.png)
 
-There are two main methods of obtaining Mega Shards and the first one is by finding them underground! In newly generated chunks so called **Mega Energy Clusters** will generate, which behave very similar to Amethysts.
+There are two main methods of obtaining Mega Shards and the first one is by finding them underground! In newly generated chunks, Mega Energy Deposits can be found underground. These contain 1–3 Mega Energy Cores that behave similarly to budding Amethyst, slowly growing Mega Energy Buds and eventually fully grown Mega Energy Clusters.
 
 
 <img src="https://cdn.modrinth.com/data/cached_images/aa5ba866a0070943e4b28f6e93aec78bc71e3040.gif" alt="Cluster growing gif" width="75%">    
@@ -94,10 +94,10 @@ Prices too high/low? - These are configurable! _(check the `Config & Datapacks` 
 
 ### Each Villager Tier adds more Stones the Villager offers:
 
-**Novice**: 1-3 Tier 1 Mega Stones    
-**Apprentice**: 1-3 Tier 2 Mega Stones    
-**Journeyman**: 1-3 Tier 3 Mega Stones    
-**Expert**: 1-3 Tier 4 Mega Stones    
+**Novice**: 2-3 Tier 1 Mega Stones    
+**Apprentice**: 2-3 Tier 2 Mega Stones    
+**Journeyman**: 2-3 Tier 3 Mega Stones    
+**Expert**: 2-3 Tier 4 Mega Stones    
 **Master**: one Tier 5 Mega Stone or a Blank Mega Stone
 
 
@@ -150,7 +150,7 @@ Absolite Z, Baxcalibrite, Charizardite X, Charizardite Y, Delphoxite, Dragoninit
 <details>
 <summary>All Tier 5 Stones</summary>
 
-Diancite, Latiasite, Latiosite, Mewtwonite X, Mewtwonite Y
+Blank Mega Stone, Diancite, Latiasite, Latiosite, Mewtwonite X, Mewtwonite Y
 
 </details>
 
@@ -336,4 +336,4 @@ You have two options, depending on which discord server you wanna join. I mean y
 
 ![LICENSE divider](https://cdn.modrinth.com/data/cached_images/0477f8a47d088679ab913d34f195b76711b8f07f.png)
 
-ZA Mega Shards has its own custom license so if you want to know what you *are* and *aren't* allowed to do - I **highly** recommend you read the [License FAQ](https://github.com/Lvnatic-T/Lost-Lore/wiki) or the [License](https://github.com/Lvnatic-T/Lost-Lore/blob/main/LICENSE.md) itself!   
+ZA Mega Shards has its own custom license so if you want to know what you *are* and *aren't* allowed to do - I **highly** recommend you read the [License FAQ](https://github.com/Lvnatic-T/Lost-Lore/wiki) or the [License](https://github.com/Lvnatic-T/za_mega_shards/blob/master/LICENSE.md) itself!   
