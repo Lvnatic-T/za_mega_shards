@@ -36,6 +36,7 @@
 - Includes multiple tier-specific advancements and a few hidden challenges so you don't get bored by the "grind"!
 
 ### Configuration, Miscellaneous & Support:
+- Added support for _most_ of the existing terrain generation mods & datapacks
 - Added/Included an optional dark mode resource pack so you don't get flashbanged
 - Added `/za_mega_shards info` command for debugging with info on most config & datapack functionality
 - Added a server-side config for adjusting many things like maximum trades amount, toggling Mega Energy deposits generation & Mega Stone disassembly, as well as Mega Stone prices and disassembly returns per tier
