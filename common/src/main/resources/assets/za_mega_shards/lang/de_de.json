@@ -43,6 +43,16 @@
   "block.za_mega_shards.medium_mega_energy_bud": "Mittlere Mega-Energieknospe",
   "block.za_mega_shards.small_mega_energy_bud": "Kleine Mega-Energieknospe",
 
+  "command.za_mega_shards.info.title": "ZA Mega Shards — Version %s",
+  "command.za_mega_shards.info.total": "Registrierte Mega-Steine: %s",
+  "command.za_mega_shards.info.tier": "Stufe %s: %s Steine | Kaufpreis: %s | Rückgabe: %s",
+  "command.za_mega_shards.info.configuration": "Einstellungen:",
+  "command.za_mega_shards.info.disassembly": "Mega-Stein-Zerlegung: %s",
+  "command.za_mega_shards.info.deposits": "Mega-Energie-Vorkommen: %s",
+  "command.za_mega_shards.info.max_uses": "Max. Handelsvorgänge pro Angebot: %s",
+  "command.za_mega_shards.info.enabled": "Aktiviert",
+  "command.za_mega_shards.info.disabled": "Deaktiviert",
+
   "container.za_mega_shards.mega_research_station": "Mega-Forschungsstation",
 
   "entity.minecraft.villager.mega_researcher": "Mega-Forscher",

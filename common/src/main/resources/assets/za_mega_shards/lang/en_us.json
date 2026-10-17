@@ -43,6 +43,16 @@
   "block.za_mega_shards.medium_mega_energy_bud": "Medium Mega Energy Bud",
   "block.za_mega_shards.small_mega_energy_bud": "Small Mega Energy Bud",
 
+  "command.za_mega_shards.info.title": "ZA Mega Shards — Version %s",
+  "command.za_mega_shards.info.total": "Registered Mega Stones: %s",
+  "command.za_mega_shards.info.tier": "Tier %s: %s stones | Buy: %s | Return: %s",
+  "command.za_mega_shards.info.configuration": "Configuration:",
+  "command.za_mega_shards.info.disassembly": "Disassembly: %s",
+  "command.za_mega_shards.info.deposits": "Mega Energy Deposits: %s",
+  "command.za_mega_shards.info.max_uses": "Max uses per trade: %s",
+  "command.za_mega_shards.info.enabled": "Enabled",
+  "command.za_mega_shards.info.disabled": "Disabled",
+
   "container.za_mega_shards.mega_research_station": "Mega Research Station",
 
   "entity.minecraft.villager.mega_researcher": "Mega Researcher",
