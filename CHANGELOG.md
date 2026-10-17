@@ -38,6 +38,6 @@
 ### Configuration, Miscellaneous & Support:
 - Added/Included an optional dark mode resource pack so you don't get flashbanged
 - Added `/za_mega_shards info` command for debugging with info on most config & datapack functionality
-- Added a server-side config for adjusting many things like maximum trades amount, toggling Cluster generation & disassembly, as well as Mega Stone prices and disassembly returns per tier
+- Added a server-side config for adjusting many things like maximum trades amount, toggling Mega Energy deposits generation & Mega Stone disassembly, as well as Mega Stone prices and disassembly returns per tier
 - Mega Stone tiers are handled through item tags, allowing datapacks to add or rebalance Stones without modifying the mod itself
 - [Lost Lore](https://modrinth.com/datapack/poketwo) v3.2+ adds support for its custom Mega Stones to be available in trades & being able to disassemble them
