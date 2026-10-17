@@ -39,7 +39,9 @@ public final class ZAMSAdvancementEvents {
         });
 
         TickEvent.PLAYER_POST.register(player -> {
-            if (player instanceof ServerPlayer serverPlayer) ZAMSAdvancements.checkMassProduction(serverPlayer);
+            if (player instanceof ServerPlayer serverPlayer && serverPlayer.tickCount % 20 == 0) {
+                ZAMSAdvancements.checkMassProduction(serverPlayer);
+            }
         });
     }
 }
