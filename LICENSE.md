@@ -1,234 +1,144 @@
-# Lvnatic's General license
+# Lvnatic's General License
 
-**Version 1.2**\
+**Version 1.3**  
+**Effective Date:** 25.10.2026  
 Copyright © 2026 Lvnatic
 
-This license applies to any creation that lists this license as its license, together with its associated files, assets, documentation, & other original content covered by this license (collectively, the **"Licensed Content"**) & distributed by **Lvnatic** (the **"Licensor"**).
+This license applies only to projects or releases that expressly identify **Lvnatic's General License** as their applicable license, including through an official project page, or that include this license in their distribution.
 
-By installing, modifying, or otherwise using the Licensed Content, you agree to the terms of this license.
+It governs the software, source code, compiled files, data, documentation, and other materials included in those projects or releases to the extent that **Lvnatic** (the **Licensor**) holds or is authorized to grant the relevant rights (the **Licensed Content**). Materials published separately, such as wiki pages, external documentation, and promotional content, are covered only if expressly designated as subject to this license.
+
+The permissions below are subject to the applicable conditions of this license. Rights belonging to contributors or other third parties, and rights granted by applicable law, remain unaffected.
+
+## Definitions
+
+For the purposes of this license:
+
+- **Licensed Project** means a project or release to which this license applies as described above.
+- **Public Distribution** means making files available to the public or a broadly accessible group, through any platform or method. Registration, a password, an invitation link, or a whitelist does not by itself make distribution private.
+- **Private Sharing** means sharing files only within a limited, specifically invited group that is not generally open to the public. The actual accessibility of the group, rather than the service used, determines whether sharing is private.
+- **Official Distribution Source** means a platform, repository, or service on which the Licensor has personally published the relevant Licensed Project, whether as source code or as a downloadable release. This status applies to the project as a whole, not only to versions hosted there. Unauthorized third-party uploads do not establish an Official Distribution Source.
+- **Modified Copy** means a copy of original Licensed Content that has been altered, adapted, rebuilt, or repackaged, including modifications to source code, compiled files, or assets.
+- **Independent Project** means separately developed software, datapacks, resource packs, scripts, or other content that interacts with or extends a Licensed Project without unlawfully reproducing or redistributing protected portions of its original material. Compatibility may be required or optional.
+- **Written Authorization** means express, verifiable written permission from the Licensor or an authorized representative, or, for rights held independently by another person, that rights holder or their authorized representative. It applies only to the uses, materials, projects, and distribution methods actually authorized. Silence or failure to respond does not constitute authorization.
 
 ## 1. Ownership
 
-All rights, title, and interest in the Licensed Content remain with the Licensor or the respective original creators & rights holders, as applicable.
+Copyright and other intellectual property rights in the Licensed Content remain with their respective rights holders. This license grants rights of use, not ownership.
 
-This license does not transfer ownership or copyright of the Licensed Content to you. It only grants you the permissions specifically described in this license.
+Modifying, using, or contributing to a Licensed Project does not transfer ownership of another person's pre-existing material. Contributors retain rights in their original contributions unless otherwise provided by law or a separate valid agreement. Contributions accepted for inclusion must be authorized for integration, modification, maintenance, and distribution under the applicable terms; inclusion does not give a contributor ownership of the entire project.
 
-Unless explicitly stated otherwise, all original models, textures, animations, artwork, sounds, code, documentation, & other assets included in the Licensed Content remain the intellectual property of the Licensor, contributors, or their respective original creators, as applicable.
+Independently developed projects remain the property of their respective creators. Merely interoperating with or depending on a Licensed Project does not give the Licensor ownership of those projects.
 
-This license does not grant rights to any third-party content, trademarks, or intellectual property that may be included in or associated with the Licensed Content.
+Project names and branding may be used truthfully to identify compatibility, but may not be used to falsely claim official authorship, approval, sponsorship, or endorsement.
 
 ## 2. Permitted Use
 
-You are granted a worldwide, non-exclusive, perpetual license to use the Licensed Content for personal purposes & for the specific uses expressly permitted by this license, subject to all restrictions & conditions contained herein and subject to termination under Section 12.
+To the extent the Licensor is authorized to grant the relevant rights, you are granted a **worldwide, non-exclusive, royalty-free, perpetual** license to exercise the permissions expressly set out below, subject to this license and any lawful termination under Section 9.
 
 You may:
 
-- Install & use the Licensed Content for personal use.
-- Use the Licensed Content on  Minecraft Java Edition servers.
-- Use the Licensed Content on monetized Minecraft Java Edition servers as permitted under Section 8.
-- Include the Licensed Content in Minecraft Java Edition modpacks in accordance with Sections 3, 4, & 5.
-- Modify the Licensed Content for private use.
-- Create & publicly distribute forks, modified versions, derivative addons, or other derivative works only with explicit permission from the Licensor and in accordance with Section 6.
-- Make any other use that is expressly permitted by this license.
+- Install and use the Licensed Content privately, including in singleplayer, LAN games, and Minecraft Java Edition servers limited to a specifically invited private group.
+- Make any modifications for private use and share original or modified copies privately within such a group, subject to applicable third-party rights and the preservation of notices required by Section 3.
+- Include unmodified Licensed Content in public Minecraft Java Edition modpacks under Sections 3 and 4.
+- Create, publish, and monetize independent addons, mods, datapacks, resource packs, scripts, and other integrations under Sections 5 and 6.
+- Operate publicly accessible Minecraft Java Edition servers after obtaining the Written Authorization required by Section 7.
+- Create, publish, and monetize videos, streams, screenshots, reviews, tutorials, guides, showcases, and other media featuring the Licensed Content, without additional permission or mandatory attribution. This includes illustrative use of gameplay footage and visual or audio assets in such media, including edited screenshots, thumbnails, and demonstrations, but not distributing extracted assets as reusable standalone files or products. Advertising, sponsorships, subscriptions, donations, and similar media revenue are permitted, subject to applicable third-party rights.
 
-All permissions granted under this section remain subject to the restrictions & conditions described elsewhere in this license.
+These permissions and the restrictions elsewhere in this license apply equally to users, modpack creators, server operators, and addon developers unless expressly stated otherwise.
+
+Nothing in this license limits rights or statutory exceptions that cannot lawfully be restricted by agreement under applicable law.
 
 ## 3. Attribution
 
-When the Licensed Content is included in a publicly distributed modpack, derivative addon, project, or other publicly distributed work, appropriate credit must be given to the Licensor.
+Public modpacks distributing Licensed Content, publicly accessible servers using it, and separately authorized public redistributions must identify **Lvnatic** and each relevant Licensed Project by name. A link to an official project or download page is required where reasonably possible.
 
-Credit must clearly identify Lvnatic & the relevant Licensed Content. Where reasonably possible, the credit should also include a link to the official project or download page.
+Credit may be given in any reasonably accessible location, including a project description, platform dependency listing, credits page, documentation, attribution file, or accessible community channel. Automatic platform attribution is sufficient if it identifies the relevant project and Licensor and provides an appropriate link where reasonably possible.
 
-Where applicable, existing attribution or contributor credits included with the Licensed Content must not be removed or intentionally obscured.
+Existing copyright notices, license notices, and contributor attribution included with distributed Licensed Content must be preserved in original or modified copies, including privately shared copies. Redistributors are not required to research and individually list contributors beyond preserving the notices provided with the Licensed Content.
 
-Attribution may be provided in a reasonable location appropriate to the type of project, such as a modpack description, project page, credits file, documentation, or similar location.
+Any authorized public distribution of a Modified Copy must clearly identify it as modified. Authorized standalone forks must also identify the original Licensed Project and their unofficial status; a detailed changelog is not required.
 
-Content such as videos, streams, screenshots, reviews, showcases, & similar media does not require attribution, although credit is always appreciated.
+Private use and Private Sharing require no separate attribution. An Independent Project that does not distribute protected Licensed Content does not need to credit the Licensor merely because it is compatible. Attribution never replaces an authorization required elsewhere in this license.
 
-## 4. Modpacks
+## 4. Redistribution
 
-You may include the Licensed Content in Minecraft Java Edition modpacks without obtaining additional permission from the Licensor.
+Public redistribution of the Licensed Content is permitted only as expressly allowed here or by prior Written Authorization.
 
-Modpacks may be distributed publicly through any platform on which the original Licensed Content is officially distributed by the Licensor.
+Unmodified Licensed Content may be included in publicly distributed Minecraft Java Edition modpacks, including client and server modpacks, without additional authorization if the modpack is distributed through an Official Distribution Source of each included Licensed Project and complies with Section 3 and applicable platform rules. The modpack may include the unmodified files or arrange for their installation through an authorized source.
 
-The addon itself must remain available through its permitted distribution source & may not be reuploaded as a separate downloadable file for the purpose of replacing, mirroring, or bypassing the Licensor's official distribution.
+A modpack or Independent Project distributed elsewhere may reference a Licensed Project and direct users to obtain it separately from an Official Distribution Source, provided it does not itself redistribute the Licensed Content. Merely listing a dependency or providing a link to an official download is not redistribution of the linked files under this license.
 
-Modpack creators may modify the Licensed Content for compatibility, integration, configuration, or other reasonable purposes necessary for inclusion in the modpack without obtaining separate permission from the Licensor.
+Public standalone reuploads, mirrors, or replacements of Licensed Content require prior Written Authorization, **even when the files are unchanged and the upload is on an Official Distribution Source**. Public distribution of Modified Copies, including Modified Copies within modpacks, likewise requires prior Written Authorization, **except for the external gameplay-data overrides expressly permitted by Section 5**. Permitting a modpack to include an original file does not grant permission to publish that file separately or to distribute an altered version.
 
-These modifications may not be separately published or distributed as an independent derivative addon without explicit permission from the Licensor.
+Unless the Written Authorization expressly provides otherwise, any authorized public distribution of original or modified Licensed Content remains limited to Official Distribution Sources. An authorization does not automatically permit sublicensing or further independent redistribution by others.
 
-Appropriate credit to the Licensor & the Licensed Content must be provided in accordance with Section 3.
+These public redistribution restrictions do not prohibit Private Sharing under Section 2 or the distribution of Independent Projects under Section 5.
 
-All modpack distribution remains subject to the distribution platform restrictions described in Section 5.
+## 5. Modifications and Independent Projects
 
-## 5. Redistribution
+You may freely modify and privately share the Licensed Content as permitted by Section 2.
 
-Redistribution of the Licensed Content itself as a standalone download is not permitted unless explicitly authorized by the Licensor.
+You may independently create, publish, and monetize mods, addons, datapacks, resource packs, scripts, compatibility patches, and other projects that interact with, extend, or alter the behavior of a Licensed Project, without additional permission. This includes independent runtime integrations and original replacement assets, provided they do not incorporate or distribute unauthorized reproductions or adaptations of protected software or creative assets.
 
-You may not:
+As a specific exception, **external gameplay-data overrides** may reproduce or adapt existing gameplay-data files, including recipes, spawn data, or similar functional data, when used to alter a Licensed Project through a separate datapack or comparable integration that requires the original project to function. This exception does not extend to protected source or compiled program code or creative assets such as models, animations, textures, sounds, and artwork, regardless of file format.
 
-- Reupload the Licensed Content to another website, platform, repository, or download service.
-- Mirror the Licensed Content without explicit permission.
-- Package the Licensed Content into a separate downloadable archive for redistribution.
-- Distribute the Licensed Content in a way intended to replace, mirror, bypass, or circumvent the Licensor's official distribution.
-- Claim the Licensed Content as your own creation.
+Projects that optionally support a Licensed Project are permitted on the same basis as those requiring it as a dependency. Referring to its technical identifiers or interfaces for compatibility does not, by itself, constitute prohibited reuse.
 
-Any public distribution that is otherwise permitted under this license must take place only on platforms on which the relevant Licensed Content is officially distributed by the Licensor.
+Public distribution of Modified Copies, standalone forks, or other projects containing unauthorized copies or adaptations of protected code or creative assets requires prior Written Authorization, except as otherwise expressly permitted above or by applicable law. This applies regardless of the platform, format, game, or edition involved. Describing a project as independent or making it depend on the original project does not authorize copied or adapted protected material.
 
-As an example:
+## 6. Asset Usage
 
-- If the Licensed Content is officially distributed only on **Modrinth**, any permitted public distribution  must also take place only on **Modrinth**.
-- If the Licensed Content is officially distributed on both Modrinth & CurseForge, permitted distribution may take place on either or both of those.
+All protected creative assets included in the Licensed Content—including models, textures, animations, artwork, sprites, icons, particle effects, sounds, and other visual or audio materials—remain subject to their respective rights holders' rights, regardless of file format.
 
-The presence of an unauthorized copy, reupload, mirror, fork, or other version of the Licensed Content on another platform does not make that platform an authorized distribution platform.
+Publicly reproducing, redistributing, converting, or adapting such assets for independent use requires prior Written Authorization from the relevant rights holder, except where otherwise permitted by this license or applicable law. Recreating protected expression without directly copying the original file, or making minor alterations, does not by itself make an adaptation independent.
 
-These platform restrictions apply to all forms of permitted public distribution under this license, including modpacks, authorized derivative works, forks, compatibility versions, modified versions, and similar projects.
+Independently created original replacements and projects that reference assets from a separately installed Licensed Project without copying or redistributing them are permitted. The gameplay-data exception in Section 5 does not authorize reproduction or adaptation of protected creative assets.
 
-This section does not prohibit legitimate modpack distribution as permitted under Section 4, provided that all requirements of Section 4 & this section are followed.
+These restrictions do not prohibit illustrative use of visual or audio assets in media as permitted by Section 2. Authorization for independent asset reuse is limited to the approved use and does not automatically confer sublicensing or onward reuse rights. Reuse authorized by the Licensor remains subject to the attribution requirements of Section 3; separately authorized third-party material remains subject to that rights holder's terms.
 
-## 6. Modification and Derivative Works
+## 7. Commercial Use and Public Servers
 
-You may modify the Licensed Content for private use without obtaining additional permission from the Licensor.
+Operating a **publicly accessible Minecraft Java Edition server** using the Licensed Content requires prior Written Authorization, whether the server is free or monetized. Private servers restricted to a limited, specifically invited group fall under Section 2 and do not require such authorization. A server does not become private merely because it has a whitelist, registration requirement, or other access restriction if it is broadly open to the public.
 
-You may create & publicly distribute a fork, modified version, derivative addon, or other derivative work based on the Licensed Content only with explicit permission from the Licensor.
+An authorized public server may earn revenue through general paid access, ranks, subscriptions, donations, sponsorships, independently created cosmetics, and general gameplay benefits, provided it complies with applicable Minecraft and third-party rules. These permissions do not authorize selling or paywalling specific content or features supplied by the Licensed Project.
 
-Any authorized derivative work must:
+Without separate Written Authorization, a server may not specifically sell, paywall, or grant purchase-exclusive access to items, forms, Pokémon, or other content or functionality supplied through the Licensed Project. This includes rewards obtained through paid ranks, subscriptions, purchased virtual currency, and crates or other randomized rewards that can be obtained by any paid method. **Offering the same reward through free gameplay does not make a paid method permissible.** Randomized rewards obtainable exclusively through free gameplay are not prohibited by this restriction.
 
-- Provide appropriate credit in accordance with Section 3.
-- Clearly identify the original Licensed Content on which it is based.
-- Comply with the distribution platform restrictions described in Section 5.
-- Comply with all other applicable terms of this license.
+The Licensed Content itself may not be sold, rented, or made available through payment-gated distribution without prior Written Authorization. Publicly distributed modpacks that include copies of Licensed Content must be freely accessible; payment, a paid membership, or a purchase may not be required to download or install those modpacks. Voluntary donations and ordinary platform creator rewards are permitted.
 
-Permission to create or distribute a derivative work does not grant permission to extract individual models, textures, animations, sounds, artwork, or other assets from the Licensed Content for independent use in another project. (See Section 7)
+Independent commercial projects that do not contain or unlawfully redistribute protected Licensed Content, including independently developed compatibility addons and separately provided installation or configuration services, are not prohibited merely because they interact with a Licensed Project.
 
-The limited modification permission granted to modpack creators under Section 4 does not constitute general permission to publish or distribute a standalone fork, derivative addon, compatibility addon, or modified version of the Licensed Content.
+## 8. Third-Party Content
 
-Any public distribution of a derivative work without the Licensor's explicit permission is prohibited.
+Licensed Projects may contain contributions and material owned by third parties. Such material remains subject to the rights, licenses, and permissions applicable to it.
 
-## 7. Asset Usage
+The Licensor grants permissions only to the extent authorized to do so. No provision of this license overrides rights independently held by third parties or permissions granted under their applicable licenses.
 
-Individual assets contained within the Licensed Content may not be extracted, copied, adapted, converted, or reused independently in another project without explicit permission from the Licensor or, where applicable, the respective original creator, including, but is not limited to:
+Required third-party copyright, license, and attribution notices must be preserved in accordance with Section 3 and the applicable third-party terms.
 
-- Models
-- Textures
-- Animations
-- Artwork
-- Icons
-- Particle effects
-- Sounds
-- Other original visual or audio assets
+## 9. License Violations
 
-You must obtain explicit permission before using such assets in another addon, mod, resource pack, datapack, game, server project, website, application, commercial product, or other independent work.
+Activities outside the permissions granted by this license are unauthorized and must cease. In particular, anyone responsible for an unauthorized public upload or other prohibited public distribution must stop distributing the affected content and remove unauthorized copies from public availability.
 
-This restriction applies regardless of whether the other project is commercial or noncommercial.
+For a **first-time, minor, and remediable** failure to comply with a license condition, the Licensor will provide written notice and allow **seven (7) calendar days** from receipt to correct it. A timely and complete correction prevents termination solely for that failure or restores the affected permission, as applicable. This correction procedure does not authorize unrelated public reuploads, exploitation, or other conduct for which no permission was granted.
 
-Permission to use the Licensed Content under another section of this license, including permission to include it in a modpack or create an authorized derivative work, does not automatically grant permission to extract or independently reuse its individual assets.
+Serious, deliberate, or repeated violations may result in immediate termination of the permissions granted under this license, to the extent permitted by applicable law. If notice or an opportunity to remedy is legally required, termination takes effect only in accordance with those requirements. Following termination for such violations, restoration of permissions requires express Written Authorization from the Licensor.
 
-Any permission granted for asset reuse applies only to the specific use authorized by the Licensor or respective rights holder & does not grant unrestricted rights to the asset.
+The Licensor may request removal of unauthorized content and pursue remedies available under applicable law. Separate authorization agreements and mandatory legal protections remain subject to their applicable terms and rules.
 
-## 8. Commercial Use
+## 10. License Changes
 
-Use of the Licensed Content on commercial or monetized Minecraft Java Edition servers is permitted.
+The Licensor may publish revised versions of this license for future releases. Each release remains governed by the license version applicable when that release was published. Later revisions do not automatically modify or revoke permissions previously granted for earlier releases.
 
-A server may generate revenue while using the Licensed Content, including through:
+Separately granted Written Authorizations remain effective according to their original terms and scope unless lawfully modified or terminated. Revised license terms do not automatically expand or revoke such authorizations.
 
-- Ranks
-- Cosmetics
-- Crates
-- Donations
-- Subscriptions
-- Paid server access
-- In-game purchases
-- Sponsorships
-- Other similar forms of server monetization
+## 11. No Warranty and Liability
 
-However, the Licensed Content itself may not be sold in said revenue streams, paywalled, sublicensed, rented, licensed for a fee, or otherwise offered in exchange for payment.
+The Licensed Content is provided **"as is"**, without warranties or guarantees to the maximum extent permitted by applicable law.
 
-You may not require payment specifically to obtain, download, unlock, or gain access to the Licensed Content itself.
+The Licensor does not guarantee its functionality, reliability, availability, or compatibility and has no obligation to provide maintenance, support, updates, or corrections.
 
-All commercial server use remains subject to the other terms & restrictions of this license.
+The Licensor's liability for damages arising from the use of the Licensed Content is limited to the maximum extent permitted by applicable law. Nothing in this license excludes or limits liability for intentional misconduct, injury to life, body or health, gross negligence where such limitation is prohibited, or other liability that cannot lawfully be excluded or limited.
 
-## 9. Content Creation
-
-You may freely create, publish, & monetize content featuring the Licensed Content without obtaining additional permission from the Licensor including, but is not limited to:
-
-- Livestreams
-- Screenshots
-- Reviews
-- Tutorials & guides
-- Showcases
-- Social media content
-- Articles & blog posts
-- Promotional or informational content
-
-Such content may be monetized through advertising, sponsorships, subscriptions, memberships, donations, or similar forms of content monetization.
-
-Attribution is not required but  appreciated.
-
-## 10. Minecraft Java Edition & Bedrock Edition
-
-The Licensed Content is intended for use within the **Minecraft Java Edition ecosystem**, specifically in connection with Cobblemon where applicable.
-
-Use of the Licensed Content in **Minecraft Bedrock Edition is expressly prohibited** without explicit permission from the Licensor including, but is not limited to:
-
-- Bedrock addons
-- Bedrock mods
-- Bedrock resource packs
-- Bedrock behavior packs
-- Bedrock servers
-- Bedrock Marketplace content
-- Bedrock ports or conversions
-- Conversion of the Licensed Content into Bedrock-compatible formats
-- Extraction, adaptation, recreation, or modification of the Licensed Content for use in Bedrock projects
-
-You may not port, convert, adapt, recreate, extract, or otherwise use the Licensed Content or its assets for Minecraft Bedrock Edition without explicit permission from the Licensor.
-
-These restrictions apply regardless of whether the resulting Bedrock project is commercial or not.
-
-## 11. Third-Party Content
-
-The Licensed Content may include material created by third parties or material that is subject to separate licenses or terms.
-
-This license applies only to content for which the Licensor has the necessary rights to grant the permissions described in this license.
-
-Third-party content remains subject to its respective license, terms of use, or other applicable rights & restrictions.
-
-Where third-party attribution or license information is included with the Licensed Content, it must be preserved where required by the applicable third-party license or terms.
-
-## 12. License Violations
-
-If you violate the terms of this license, the permissions granted to you under this license may immediately terminate.
-
-Upon termination, you must cease the unauthorized use, distribution, modification, or exploitation of the Licensed Content & remove any unauthorized copies, derivatives, ports, reuploads, or other content that violates this license from public distribution.
-
-If you fail to remove or cease the unauthorized content within a reasonable period after being notified, the Licensor reserves the right to pursue further enforcement action.
-
-This may include, where applicable:
-
-- Copyright infringement reports
-- Platform takedown or removal requests
-- DMCA takedown requests
-- Copyright claims
-- Other legal or administrative remedies available to the Licensor
-
-The Licensor may choose to restore the permissions granted under this license after the violation has been fully resolved.
-
-Nothing in this section limits any other rights or remedies available to the Licensor under applicable law.
-
-## 13. License Changes
-
-This license applies to the version of the Licensed Content with which it is distributed.
-
-The Licensor may release future versions of the Licensed Content under updated or revised license terms.
-
-Unless explicitly stated otherwise, changes to this license do not retroactively alter the license terms under which an earlier version of the Licensed Content was originally distributed.
-
-Continued use of a newly released version of the Licensed Content is subject to the license terms provided with that version.
-
-## 14. No Warranty
-
-The Licensed Content is provided **"as is"**, without warranties of any kind, to the maximum extent permitted by applicable law.
-
-The Licensor does not guarantee that the Licensed Content will be free of bugs, errors, compatibility issues, interruptions, or other problems.
-
-The Licensor is not responsible for damage, data loss, server issues, incompatibilities, or other problems resulting from the use of the Licensed Content, except where liability cannot legally be excluded.
+Obligations under separate valid agreements remain unaffected.
