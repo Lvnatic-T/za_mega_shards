@@ -11,7 +11,7 @@
     "homepage": "https://github.com/Lvnatic-T/za_mega_shards"
   },
   "license": "Lvnatic's General license",
-  "icon": "assets/za_mega_shards/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
