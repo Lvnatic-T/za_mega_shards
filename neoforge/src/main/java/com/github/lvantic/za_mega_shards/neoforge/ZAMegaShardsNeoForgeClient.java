@@ -2,6 +2,7 @@ package com.github.lvantic.za_mega_shards.neoforge;
 
 import com.github.lvantic.za_mega_shards.ZAMegaShards;
 import com.github.lvantic.za_mega_shards.block.ZAMSBlockEntities;
+import com.github.lvantic.za_mega_shards.client.config.ZAMSConfigScreen;
 import com.github.lvantic.za_mega_shards.client.renderer.MegaResearchStationRenderer;
 import com.github.lvantic.za_mega_shards.screen.ZAMSMenuTypes;
 import com.github.lvantic.za_mega_shards.screen.custom.screen.MegaResearchStationScreen;
@@ -12,7 +13,10 @@ import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
@@ -49,4 +53,13 @@ public final class ZAMegaShardsNeoForgeClient {
                 Pack.Position.TOP
         );
     }
+}
+
+public static void registerConfigScreen(ModContainer container) {
+    if (!ModList.get().isLoaded("cloth_config")) return;
+
+    container.registerExtensionPoint(
+            IConfigScreenFactory.class,
+            (mod, parent) -> ZAMSConfigScreen.create(parent)
+    );
 }

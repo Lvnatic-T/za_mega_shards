@@ -19,6 +19,9 @@
     ],
     "client": [
       "com.github.lvantic.za_mega_shards.fabric.ZAMegaShardsFabricClient"
+    ],
+    "modmenu": [
+      "com.github.lvantic.za_mega_shards.fabric.ZAMSModMenu"
     ]
   },
   "depends": {

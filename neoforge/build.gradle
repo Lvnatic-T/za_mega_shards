@@ -64,6 +64,9 @@ dependencies {
 
     modImplementation "com.cobblemon:neoforge:${project.cobblemon_version}"
     modImplementation "maven.modrinth:cobblemon-mega-showdown:${project.msd_version}-neoforge"
+
+    modCompileOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
+    modLocalRuntime "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
 }
 
 processResources {

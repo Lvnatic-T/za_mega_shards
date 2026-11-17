@@ -34,6 +34,9 @@ subprojects {
         maven { url 'https://maven.neoforged.net/releases' }
         maven { url 'https://thedarkcolour.github.io/KotlinForForge/' }
 
+        maven { url 'https://maven.shedaniel.me/' }
+        maven { url 'https://maven.terraformersmc.com/releases/' }
+
         maven { url 'https://maven.wispforest.io/releases' }
         maven { url 'https://maven.su5ed.dev/releases' }
         maven { url 'https://maven.fabricmc.net' }
