@@ -47,7 +47,7 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
         this.access = access;
         this.clientSide = playerInventory.player.level().isClientSide;
 
-        this.addSlot(new Slot(inputContainer, MegaResearchStationBlockEntity.INPUT_SLOT, 62, 36) {
+        this.addSlot(new Slot(inputContainer, MegaResearchStationBlockEntity.INPUT_SLOT, 80, 22) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return MegaStoneTierHelper.isMegaStone(stack);
@@ -60,7 +60,7 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
             }
         });
 
-        this.addSlot(new Slot(this.resultContainer, 0, 98, 36) {
+        this.addSlot(new Slot(this.resultContainer, 0, 80, 43) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return false;

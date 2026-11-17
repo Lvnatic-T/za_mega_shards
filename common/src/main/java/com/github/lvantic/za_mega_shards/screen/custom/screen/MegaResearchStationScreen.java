@@ -28,6 +28,7 @@ public class MegaResearchStationScreen
 
         this.imageWidth = 176;
         this.imageHeight = 166;
+        this.titleLabelX = 6;
     }
 
     @Override
@@ -61,6 +62,22 @@ public class MegaResearchStationScreen
                 0,
                 this.imageWidth,
                 this.imageHeight
+        );
+    }
+
+    @Override
+    protected void renderLabels(
+            GuiGraphics guiGraphics,
+            int mouseX,
+            int mouseY
+    ) {
+        guiGraphics.drawString(
+                this.font,
+                this.title,
+                this.titleLabelX,
+                this.titleLabelY,
+                4210752,
+                false
         );
     }
 
