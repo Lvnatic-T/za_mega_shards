@@ -5,7 +5,6 @@ import com.github.lvantic.za_mega_shards.config.ZAMSConfigEditor;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -59,31 +58,27 @@ public final class ZAMSConfigScreen {
             return builder.build();
         }
 
-        general.addEntry(entries.startTextDescription(legend()).build());
         general.addEntry(entries.startTextDescription(text("restart")).build());
 
-        general.addEntry(entries.startBooleanToggle(setting("disassembly"), disassembly[0])
+        general.addEntry(entries.startBooleanToggle(text("disassembly"), disassembly[0])
                 .setDefaultValue(true)
                 .setTooltip(text("tooltip.disassembly"))
                 .setSaveConsumer(value -> disassembly[0] = value)
                 .build());
 
-        general.addEntry(entries.startBooleanToggle(setting("deposits"), deposits[0])
+        general.addEntry(entries.startBooleanToggle(text("deposits"), deposits[0])
                 .setDefaultValue(true)
                 .setTooltip(text("tooltip.deposits"))
                 .setSaveConsumer(value -> deposits[0] = value)
                 .build());
 
-        general.addEntry(entries.startIntSlider(setting("max_uses"), maxUses[0], 1, 64)
+        general.addEntry(entries.startIntSlider(text("max_uses"), maxUses[0], 1, 64)
                 .setDefaultValue(4)
                 .setTooltip(text("tooltip.max_uses"))
                 .setSaveConsumer(value -> maxUses[0] = value)
                 .build());
 
-        prices.addEntry(entries.startTextDescription(legend()).build());
         prices.addEntry(entries.startTextDescription(text("prices.description")).build());
-
-        returnsCategory.addEntry(entries.startTextDescription(legend()).build());
         returnsCategory.addEntry(entries.startTextDescription(text("returns.description")).build());
 
         for (int i = 0; i < 5; i++) {
@@ -113,21 +108,7 @@ public final class ZAMSConfigScreen {
         return Component.translatable("config.za_mega_shards." + key);
     }
 
-    private static Component setting(String key) {
-        return Component.empty()
-                .append(Component.literal("■ ").withStyle(ChatFormatting.RED))
-                .append(text(key));
-    }
-
     private static Component tier(int tier) {
-        return Component.empty()
-                .append(Component.literal("■ ").withStyle(ChatFormatting.RED))
-                .append(Component.translatable("config.za_mega_shards.tier", tier));
-    }
-
-    private static Component legend() {
-        return Component.empty()
-                .append(Component.literal("■ ").withStyle(ChatFormatting.RED))
-                .append(text("legend"));
+        return Component.translatable("config.za_mega_shards.tier", tier);
     }
 }

@@ -57,7 +57,6 @@
   "config.za_mega_shards.general": "General",
   "config.za_mega_shards.prices": "Mega Stone Prices",
   "config.za_mega_shards.returns": "Disassembly Returns",
-  "config.za_mega_shards.legend": "Server-side settings",
   "config.za_mega_shards.restart": "Restart the game or server after saving to apply changes.",
   "config.za_mega_shards.remote": "These settings are controlled by the dedicated server. Edit za_mega_shards.toml on the server and restart it to apply changes.",
   "config.za_mega_shards.disassembly": "Enable Disassembly",

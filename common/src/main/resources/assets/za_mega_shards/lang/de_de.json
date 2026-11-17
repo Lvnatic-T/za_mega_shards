@@ -57,7 +57,6 @@
   "config.za_mega_shards.general": "Allgemein",
   "config.za_mega_shards.prices": "Mega-Stein-Kaufpreise",
   "config.za_mega_shards.returns": "Zerlegungswerte",
-  "config.za_mega_shards.legend": "Serverseitige Einstellungen",
   "config.za_mega_shards.restart": "Starte das Spiel bzw den Server nach dem Speichern neu, damit Änderungen übernommen werden.",
   "config.za_mega_shards.remote": "Diese Einstellungen werden vom Server verwaltet. Bearbeite za_mega_shards.toml auf dem Server und starte ihn neu, um Änderungen zu übernehmen.",
   "config.za_mega_shards.disassembly": "Zerlegung aktivieren",

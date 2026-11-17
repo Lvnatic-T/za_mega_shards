@@ -39,6 +39,6 @@
 - Added support for _most_ of the existing terrain generation mods & datapacks
 - Added/Included an optional dark mode resource pack so you don't get flashbanged
 - Added `/za_mega_shards info` command for debugging with info on most config & datapack functionality
-- Added a server-side config for adjusting many things like maximum trades amount, toggling Mega Energy deposits generation & Mega Stone disassembly, as well as Mega Stone prices and disassembly returns per tier
-- Mega Stone tiers are handled through item tags, allowing datapacks to add or rebalance Stones without modifying the mod itself
 - [Lost Lore](https://modrinth.com/datapack/poketwo) v3.2+ adds support for its custom Mega Stones to be available in trades & being able to disassemble them
+- Mega Stone tiers are handled through item tags, allowing datapacks to add or rebalance Stones without modifying the mod itself
+- Added a server-side config for adjusting basically anything about this mod _(viewable in game on Neoforge & with Modmenu on Fabric)_
