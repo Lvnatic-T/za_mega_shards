@@ -1,4 +1,17 @@
-## What is ZA Mega Shards?
+<center> 
+
+![Required on Client and Server](https://img.shields.io/badge/Required_on-Client_%26_Server-28A6A0)
+[![GitHub Source](https://img.shields.io/badge/Source-GitHub-0969DA?logo=github)](https://github.com/Lvnatic-T/za_mega_shards)
+[![License](https://img.shields.io/badge/License-LGL-007EC6)](https://github.com/Lvnatic-T/za_mega_shards/blob/master/LICENSE.md)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support_Me-FF5E5B?logo=kofi)](https://ko-fi.com/allthemons)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Lvnatic-00AF5C?logo=modrinth)](https://modrinth.com/user/Lvnatic)
+[![CurseForge](https://img.shields.io/badge/CurseForge-Lvnatic-F16436?logo=curseforge)](https://www.curseforge.com/members/lvnatic/projects)
+
+</center>
+
+
+
+# What is ZA Mega Shards?
 ZA Mega Shards is a side mod made for Mega Showdown that adds Mega Shards - a renewable resource to tackle one of Mega Showdowns major issues for servers or worlds with limited sizes - The obtainment of Mega Stones. These Shards are **not** gonna be another resource to craft Mega Stones themselves but rather a **Villager trade item** to buy them.
 
 
