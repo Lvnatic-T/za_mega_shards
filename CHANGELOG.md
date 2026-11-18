@@ -1,10 +1,13 @@
 # Changelog v1.0.0:
 ### Initial Release!
+- Compatible with Cobblemon 1.8+ up to latest
+- Compatible with Mega Showdown 1.2+ up to latest
+
 ### Added Mega Shards & Mega Shard Blocks:
 - Mega Shards are a new alternative way of obtaining Mega Stones without having to explore the entire world
 - Combine 9 Mega Shards into a Mega Shard Block for easier storage _(and decoration!)_
 - Blocks can be crafted back into nine Mega Shards whenever needed
-- Shards, Blocks & Buds were made by **Sanji1** so shoutout to him!
+- Shoutout to **Sanji1** for the Shard, Block & Bud assets! 
 
 ### Added Mega Energy Deposits:
 - Mega Energy Deposits can now be found underground throughout the Overworld
@@ -28,7 +31,7 @@
 
 ### Added Research Labs to Villages _(requires [Lithostitched](https://modrinth.com/mod/lithostitched))_:
 - With Lithostitched installed, Mega Researchers can have their own Research Labs in Villages
-- These Structures were made by **AIO** so shoutout to him!
+- Shoutout to **AIO** for making these Structures!
 
 ### Added lots of Advancements:
 - Added a dedicated advancement tab for this mod
@@ -41,4 +44,4 @@
 - Added `/za_mega_shards info` command for debugging with info on most config & datapack functionality
 - [Lost Lore](https://modrinth.com/datapack/poketwo) v3.2+ adds support for its custom Mega Stones to be available in trades & being able to disassemble them
 - Mega Stone tiers are handled through item tags, allowing datapacks to add or rebalance Stones without modifying the mod itself
-- Added a server-side config for adjusting basically anything about this mod _(viewable in game on Neoforge & with Modmenu on Fabric)_
+- Added a server-side config for adjusting basically anything about this mod _(viewable in game with cloth config on Neoforge & with Modmenu on Fabric)_
