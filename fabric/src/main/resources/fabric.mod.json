@@ -8,9 +8,11 @@
     "Lvnatic"
   ],
   "contact": {
-    "homepage": "https://github.com/Lvnatic-T/za_mega_shards"
+    "homepage": "https://github.com/Lvnatic-T/za_mega_shards",
+    "issues": "https://github.com/Lvnatic-T/za_mega_shards/issues",
+    "sources": "https://github.com/Lvnatic-T/za_mega_shards"
   },
-  "license": "Lvnatic's General license",
+  "license": "Lvnatic's General License",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
@@ -25,14 +27,18 @@
     ]
   },
   "depends": {
-    "minecraft": "~1.21.1",
+    "minecraft": "1.21.1",
     "java": ">=21",
+    "fabricloader": ">=0.17.2",
+    "fabric-api": ">=0.116.8",
     "architectury": ">=13.0.8",
     "cobblemon": ">=1.8.1",
     "mega_showdown": ">=1.2.0+1.8.1+1.21.1-release"
   },
   "suggests": {
-    "lithostitched": ">=1.8.0"
+    "lithostitched": ">=1.8.0",
+    "cloth-config": ">=15.0.140",
+    "modmenu": ">=11.0.4"
   },
   "custom": {
     "modmenu": {

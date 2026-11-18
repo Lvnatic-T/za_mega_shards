@@ -1,12 +1,15 @@
+
 modLoader = "javafml"
 loaderVersion = "[2,)"
-license = "Lvnatic's General license"
+license = "Lvnatic's General License"
+issueTrackerURL = "https://github.com/Lvnatic-T/za_mega_shards/issues"
 
 [[mods]]
 modId = "za_mega_shards"
 version = "${version}"
 displayName = "Cobblemon: ZA Mega Shards"
 authors = "Lvnatic"
+displayURL = "https://modrinth.com/mod/za-mega-shards"
 description = '''
 A Mega Showdown side mod adding renewable Mega Shards & a Mega Research Station.
 '''
@@ -15,8 +18,8 @@ logoFile = "assets/za_mega_shards/icon.png"
 [[dependencies.za_mega_shards]]
 modId = "neoforge"
 type = "required"
-reason = "Update your Neoforge version!"
-versionRange = "[21,)"
+reason = "Update your NeoForge version!"
+versionRange = "[21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
@@ -59,3 +62,11 @@ reason = "Enables Research Lab generation in villages."
 versionRange = "[1.8.0,)"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.za_mega_shards]]
+modId = "cloth_config"
+type = "optional"
+reason = "Enables the in-game configuration screen."
+versionRange = "*"
+ordering = "NONE"
+side = "CLIENT"
