@@ -17,6 +17,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.ResultContainer;
 import net.minecraft.world.inventory.Slot;
@@ -56,7 +57,7 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
             @Override
             public void setChanged() {
                 super.setChanged();
-                MegaResearchStationMenu.this.updateResult();
+                MegaResearchStationMenu.this.broadcastChanges();
             }
         });
 
@@ -64,6 +65,12 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return false;
+            }
+
+            @Override
+            public boolean mayPickup(Player player) {
+                return MegaResearchStationMenu.this.clientSide
+                        || MegaResearchStationMenu.this.canTakeResult();
             }
 
             @Override
@@ -89,27 +96,51 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
     private void updateResult() {
         if (this.clientSide) return;
 
-        if (!ZAMSConfig.get().isDisassemblyEnabled()) {
-            this.resultContainer.setItem(0, ItemStack.EMPTY);
-            this.broadcastChanges();
-            return;
+        int shardAmount = 0;
+
+        if (ZAMSConfig.get().isDisassemblyEnabled()) {
+            ItemStack inputStack = this.inputContainer.getItem(MegaResearchStationBlockEntity.INPUT_SLOT);
+
+            if (!inputStack.isEmpty() && MegaStoneTierHelper.isMegaStone(inputStack)) {
+                shardAmount = MegaStoneTierHelper.getShardReturn(inputStack);
+            }
         }
+
+        ItemStack currentResult = this.resultContainer.getItem(0);
+
+        if (shardAmount <= 0) {
+            if (!currentResult.isEmpty()) {
+                this.resultContainer.setItem(0, ItemStack.EMPTY);
+            }
+        } else if (!currentResult.is(ZAMSItems.MEGA_SHARD.get()) || currentResult.getCount() != shardAmount) {
+            this.resultContainer.setItem(0, new ItemStack(ZAMSItems.MEGA_SHARD.get(), shardAmount));
+        }
+    }
+
+    private boolean canTakeResult() {
+        if (!ZAMSConfig.get().isDisassemblyEnabled()) return false;
 
         ItemStack inputStack = this.inputContainer.getItem(MegaResearchStationBlockEntity.INPUT_SLOT);
-        if (inputStack.isEmpty() || !MegaStoneTierHelper.isMegaStone(inputStack)) {
-            this.resultContainer.setItem(0, ItemStack.EMPTY);
-            this.broadcastChanges();
-            return;
-        }
+        if (inputStack.isEmpty() || !MegaStoneTierHelper.isMegaStone(inputStack)) return false;
 
         int shardAmount = MegaStoneTierHelper.getShardReturn(inputStack);
-        if (shardAmount <= 0) {
-            this.resultContainer.setItem(0, ItemStack.EMPTY);
-            this.broadcastChanges();
-            return;
-        }
+        ItemStack resultStack = this.resultContainer.getItem(0);
 
-        this.resultContainer.setItem(0, new ItemStack(ZAMSItems.MEGA_SHARD.get(), shardAmount));
+        return shardAmount > 0
+                && resultStack.is(ZAMSItems.MEGA_SHARD.get())
+                && resultStack.getCount() == shardAmount;
+    }
+
+    @Override
+    public void broadcastChanges() {
+        this.updateResult();
+        super.broadcastChanges();
+    }
+
+    @Override
+    public void clicked(int slotId, int button, ClickType clickType, Player player) {
+        this.updateResult();
+        super.clicked(slotId, button, clickType, player);
         this.broadcastChanges();
     }
 
@@ -129,7 +160,9 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
         }
         this.inputContainer.setChanged();
 
-        if (player instanceof ServerPlayer serverPlayer) ZAMSAdvancements.awardDisassembly(serverPlayer, tier);
+        if (player instanceof ServerPlayer serverPlayer) {
+            ZAMSAdvancements.awardDisassembly(serverPlayer, tier);
+        }
 
         this.access.execute((level, pos) -> {
             level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 2.0F, 0.85F);
@@ -143,7 +176,7 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
             }
         });
 
-        this.updateResult();
+        this.broadcastChanges();
     }
 
     @Override
@@ -153,6 +186,8 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
+        this.updateResult();
+
         Slot slot = this.slots.get(index);
         if (!slot.hasItem()) return ItemStack.EMPTY;
 
@@ -160,6 +195,7 @@ public class MegaResearchStationMenu extends AbstractContainerMenu {
         ItemStack original = stack.copy();
 
         if (index == RESULT_MENU_SLOT) {
+            if (!slot.mayPickup(player)) return ItemStack.EMPTY;
             if (!this.canFullyMoveToPlayerInventory(stack)) return ItemStack.EMPTY;
             if (!this.moveItemStackTo(stack, PLAYER_INVENTORY_START, HOTBAR_END, true)) return ItemStack.EMPTY;
             slot.onTake(player, original);
